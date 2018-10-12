@@ -14,25 +14,37 @@ Polynomial<T>::Polynomial(string s){
     int power = 0;
     int count = 0;
     bool hasSeenNegative = false;
+    bool hasSeenNegativePower = false;
     start = NULL;
     for(char x : s){
-        if(x == '-') hasSeenNegative = true;
+        if(x == '-' && count == 0) hasSeenNegative = true;
+        if(x == '-' && count == 1) hasSeenNegativePower = true;
         if(x>='0' && x<='9' && count == 0){
-            coef = (hasSeenNegative) ? -1* (x - '0') : (x - '0');
-            count++;
+            coef = coef * 10 + (x - '0');
         }else if(x>='0' && x<='9' && count == 1){
-            power = x - '0';
-            count++;
+            power = power * 10 + (x - '0');
         }
-        
+        if(x == ' ')count++;
         if(count == 2){
+            coef = (hasSeenNegative) ? -1*coef : coef;
+            power = (hasSeenNegativePower) ? -1*power : power;
             Node<T>* node = new Node<T>(coef, power);
             insert(node);
+            power = 0;
+            coef = 0;
             count = 0;
             hasSeenNegative = false;
+            hasSeenNegativePower = false;
         }
     }
-        
+    coef = (hasSeenNegative) ? -1*coef : coef;
+    power = (hasSeenNegativePower) ? -1*power : power;
+    Node<T>* node = new Node<T>(coef, power);
+    insert(node);   
+}
+template<class T>
+Polynomial<T>::~Polynomial(){
+    delete start;
 }
 template<class T>
 void Polynomial<T>::insert(Node<T>* node){

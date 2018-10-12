@@ -9,6 +9,7 @@ class Polynomial{
     public:
         Polynomial();
         Polynomial(string s);
+        ~Polynomial();
         void insert(Node<T>* node);
         Polynomial<T>& operator+(Polynomial<T>& poly);
         Polynomial<T>& operator-(Polynomial<T>& poly);

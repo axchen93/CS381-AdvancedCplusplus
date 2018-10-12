@@ -24,6 +24,10 @@ Node<T>::Node(const Node& object){
     next = NULL;
 }
 template<class T>
+Node<T>::~Node(){
+    delete next;
+}
+template<class T>
 void Node<T>::setNext(Node<T>* next)
 {
     this->next = next;
