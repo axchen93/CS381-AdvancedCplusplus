@@ -12,6 +12,7 @@ class Node{
         Node();
         Node(T coefficent, int power, Node<T>* next);
         Node(T coefficent, int power);
+        Node(const Node& object);
         T getCoeff();
         int getPower();
         Node<T>* getNext();
@@ -21,6 +22,10 @@ class Node{
         Node<T>& operator*(const Node& object);
         void operator=(const Node& object);
         friend ostream& operator<< (ostream& cout, const Node<T>& object){
+            if(object.power == 0){
+                cout << object.coefficent;
+                return cout;
+            }
             cout << object.coefficent << "X^" << object.power;
             return cout;       
         }

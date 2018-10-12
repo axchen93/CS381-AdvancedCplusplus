@@ -18,6 +18,12 @@ Node<T>::Node(T coefficent, int power){
     next = NULL;
 }
 template<class T>
+Node<T>::Node(const Node& object){
+    coefficent = object.coefficent;
+    power = object.power;
+    next = NULL;
+}
+template<class T>
 void Node<T>::setNext(Node<T>* next)
 {
     this->next = next;

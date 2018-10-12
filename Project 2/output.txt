@@ -1,0 +1,10 @@
+Polynomial A: 
+-5X^7+2X^4-3X^3+8X^2-3X^1+6
+Polynomial B: 
+7X^9+6X^7+4X^6+5X^5+5X^3+7X^2+9
+Polynomial A + Polynomial B: 
+7X^9+1X^7+4X^6+5X^5+2X^4+2X^3+15X^2-3X^1+15
+Polynomial A - Polynomial B: 
+7X^9+1X^7+4X^6+5X^5+2X^4+2X^3+15X^2-3X^1+15
+Polynomial A * Polynomial B: 
+-35X^16-30X^14-6X^13-46X^12+68X^11-56X^10+53X^9-1X^8+29X^7+8X^6+49X^5+59X^4-18X^3+114X^2-27X^1+54
