@@ -13,6 +13,8 @@ Polynomial<T>::Polynomial(string s){
     T coef = 0;
     bool carrot = false;
     bool hasSeenNegative = false;
+    bool hasSeenX = false;
+    bool hasSeenNum = false;
     int power = 0;
     start = NULL;
     for(char x : s){
@@ -24,6 +26,7 @@ Polynomial<T>::Polynomial(string s){
             cout << "node: " << *node << endl;
             insert(node);
             carrot = false;
+            hasSeenX = false;
             hasSeenNegative = (x=='-') ? true: false;
             power = 0;
             coef = 0;
@@ -33,6 +36,8 @@ Polynomial<T>::Polynomial(string s){
             coef = coef * 10 + (x - '0');
         }else if(x=='^'){
             carrot = true;
+        }else{
+            hasSeenX = true;
         }
     }
     if(coef == 0) coef = 1;
