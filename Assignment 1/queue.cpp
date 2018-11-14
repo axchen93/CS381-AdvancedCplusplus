@@ -11,7 +11,7 @@ public:
 	{
 		s= new char[i];
 		size=i;
-		F=R=0;
+		F=R=-1;
 	}
 
 	~queue()
@@ -96,8 +96,6 @@ int main(int args, char** argv)
 	q.add('a');
 	q.add('b');
 	q.add('c');
-    q.add('d');
-    q.add('f');
-	cout << q.del() << q.del() << q.del() << q.del() << q.del();
+	cout << q.del() << q.del() << q.del();
 	return 0;
 }
