@@ -1,0 +1,51 @@
+--------------------------------------------------------------------------
+1)
+Input strings: 
+A: 2 4 -5 7 -3 1 6 0 8 2 -3 3
+B: 4 6 7 9 9 0 6 7 5 5 7 2 5 3
+Polynomial A: -5X^7+2X^4-3X^3+8X^2-3X^1+6
+Polynomial B: 7X^9+6X^7+4X^6+5X^5+5X^3+7X^2+9
+Polynomial A + Polynomial B: 7X^9+1X^7+4X^6+5X^5+2X^4+2X^3+15X^2-3X^1+15
+Polynomial A - Polynomial B: -7X^9-11X^7-4X^6-5X^5+2X^4-8X^3+1X^2-3X^1-3
+Polynomial A * Polynomial B: -35X^16-30X^14-6X^13-46X^12+68X^11-56X^10+53X^9-1X^8+29X^7+8X^6+49X^5+59X^4-18X^3+114X^2-27X^1+54
+--------------------------------------------------------------------------
+2)
+Input strings: 
+A: 12 13 14 15 16 23
+B: 123 234 334 55
+Polynomial A: 16X^23+14X^15+12X^13
+Polynomial B: 123X^234+334X^55
+Polynomial A + Polynomial B: 123X^234+334X^55+16X^23+14X^15+12X^13
+Polynomial A - Polynomial B: -123X^234-334X^55+16X^23+14X^15+12X^13
+Polynomial A * Polynomial B: 1968X^257+1722X^249+1476X^247+5344X^78+4676X^70+4008X^68
+--------------------------------------------------------------------------
+3)
+Input strings: 
+A: 1 5 4 5 3 4
+B: 2 3 4 5 1 4
+Polynomial A: 5X^5+3X^4
+Polynomial B: 4X^5+1X^4+2X^3
+Polynomial A + Polynomial B: 9X^5+4X^4+2X^3
+Polynomial A - Polynomial B: 1X^5+2X^4-2X^3
+Polynomial A * Polynomial B: 20X^10+17X^9+13X^8+6X^7
+--------------------------------------------------------------------------
+4)
+Input strings: 
+A: -3 -10 -2 -34 -20 9
+B: -5 -12 -6 -54 -5 5
+Polynomial A: -20X^9-3X^-10-2X^-34
+Polynomial B: -5X^5-5X^-12-6X^-54
+Polynomial A + Polynomial B: -20X^9-5X^5-3X^-10-5X^-12-2X^-34-6X^-54
+Polynomial A - Polynomial B: -20X^9+5X^5-3X^-10+5X^-12-2X^-34+6X^-54
+Polynomial A * Polynomial B: 100X^14+100X^-3+15X^-5+15X^-22+10X^-29+120X^-45+10X^-46+18X^-64+12X^-88
+--------------------------------------------------------------------------
+5)
+Input strings: 
+A: 123 234 334 55
+B: 0 0
+Polynomial A: 123X^234+334X^55
+Polynomial B: 0
+Polynomial A + Polynomial B: 123X^234+334X^550
+Polynomial A - Polynomial B: 123X^234+334X^550
+Polynomial A * Polynomial B: 00
+--------------------------------------------------------------------------
